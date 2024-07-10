@@ -1,9 +1,11 @@
-from django.shortcuts import render,redirect , get_object_or_404
-from django.contrib.auth import authenticate, login, logout 
+from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
 from .models import *
 from .forms import *
 from django.http import HttpResponse
+
+
 # Create your views here.
 class LoginView(View):
     template_name = 'registration/login.html'
@@ -22,9 +24,11 @@ class LoginView(View):
                 login(request, user)
                 return redirect('blog:index')
         return render(request, self.template_name, {'form': form})
-    
+
+
 def profile(request):
     return HttpResponse('you logged in')
+
 
 def log_out(request):
     logout(request)
