@@ -7,7 +7,6 @@ from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 
 
-
 # Create your views here.
 class LoginView(View):
     template_name = 'registration/login.html'
@@ -49,15 +48,16 @@ def register(request):
         form = RegisterForm()
     return render(request, 'registration/register.html', {'form': form})
 
+
 @login_required
 def edit_user(request):
     if request.method == 'POST':
-        user_form=UserEditForm(request.POST, instance=request.user)
+        user_form = UserEditForm(request.POST, instance=request.user)
         if user_form.is_valid():
             user_form.save()
     else:
-        user_form=UserEditForm(instance=request.user)
-    context={
-        'user_form':user_form,
+        user_form = UserEditForm(instance=request.user)
+    context = {
+        'user_form': user_form,
     }
-    return render(request, 'registration/edit_user.html',context)
+    return render(request, 'registration/edit_user.html', context)
