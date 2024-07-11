@@ -122,15 +122,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#  cistomizable user setting
-AUTH_USER_MODEL = 'social.User'
 
 # for login and logout
 LOGIN_REDIRECT_URL = '/profile/'
 LOGIN_URL = '/login/'
 LOGOUT_URL = '/logout/'
 
+#  cistomizable user setting
+AUTH_USER_MODEL = 'social.User'
 
+# for login with phone or email
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'social.authentication.PhoneAuthBackend',

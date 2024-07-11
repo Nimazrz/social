@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb58158-d4a1-4b82-afcd-7c37ffad6747" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/social/authentication.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/edit_user.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/register.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/register_done.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/views.py" afterDir="false" />
@@ -26,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -41,21 +43,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/Users/nima/PycharmProjects/venvsociallearn",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/nima/PycharmProjects/venvsociallearn&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="djangoProject" type="Python.DjangoServer" factoryName="Django server">
       <module name="djangoProject" />
@@ -106,7 +109,53 @@
       <workItem from="1720531379653" duration="352000" />
       <workItem from="1720559284658" duration="1061000" />
       <workItem from="1720560905616" duration="1154000" />
-      <workItem from="1720604126085" duration="2747000" />
+      <workItem from="1720604126085" duration="2848000" />
+      <workItem from="1720616222637" duration="27000" />
+      <workItem from="1720616989948" duration="1000" />
+      <workItem from="1720616996040" duration="18000" />
+      <workItem from="1720617327443" duration="24000" />
+      <workItem from="1720617945753" duration="6000" />
+      <workItem from="1720617990200" duration="42000" />
+      <workItem from="1720618968862" duration="90000" />
+      <workItem from="1720619236796" duration="81000" />
+      <workItem from="1720619429236" duration="75000" />
+      <workItem from="1720619525468" duration="4000" />
+      <workItem from="1720619893274" duration="17000" />
+      <workItem from="1720632915853" duration="8000" />
+      <workItem from="1720632927039" duration="3000" />
+      <workItem from="1720632970016" duration="6000" />
+      <workItem from="1720633058593" duration="21000" />
+      <workItem from="1720633100070" duration="11000" />
+      <workItem from="1720633164825" duration="10000" />
+      <workItem from="1720633193828" duration="18000" />
+      <workItem from="1720633245301" duration="39000" />
+      <workItem from="1720633676555" duration="24000" />
+      <workItem from="1720634154632" duration="135000" />
+      <workItem from="1720634301230" duration="18000" />
+      <workItem from="1720638124263" duration="9000" />
+      <workItem from="1720639665820" duration="1000" />
+      <workItem from="1720639672448" duration="20000" />
+      <workItem from="1720640484096" duration="40000" />
+      <workItem from="1720641052873" duration="11000" />
+      <workItem from="1720641159340" duration="8000" />
+      <workItem from="1720641470126" duration="23000" />
+      <workItem from="1720642108064" duration="24000" />
+      <workItem from="1720642159973" duration="31000" />
+      <workItem from="1720646063306" duration="87000" />
+      <workItem from="1720646582299" duration="13000" />
+      <workItem from="1720646693414" duration="11000" />
+      <workItem from="1720679257732" duration="989000" />
+      <workItem from="1720680290931" duration="150000" />
+      <workItem from="1720680452240" duration="232000" />
+      <workItem from="1720680693179" duration="79000" />
+      <workItem from="1720680775377" duration="9000" />
+      <workItem from="1720680820326" duration="218000" />
+      <workItem from="1720681055293" duration="445000" />
+      <workItem from="1720681520234" duration="136000" />
+      <workItem from="1720681753160" duration="28000" />
+      <workItem from="1720681798034" duration="66000" />
+      <workItem from="1720681886107" duration="42000" />
+      <workItem from="1720681940394" duration="144000" />
     </task>
     <servers />
   </component>

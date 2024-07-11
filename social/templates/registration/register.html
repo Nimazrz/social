@@ -1,0 +1,7 @@
+<h1>register</h1>
+<h3>enter your information</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="register">
+</form>
