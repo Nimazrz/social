@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb58158-d4a1-4b82-afcd-7c37ffad6747" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/edit_user.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/register.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/register_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/forms/ticket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
@@ -59,6 +57,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/social/templates/forms" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="djangoProject" type="Python.DjangoServer" factoryName="Django server">
       <module name="djangoProject" />
@@ -156,6 +159,9 @@
       <workItem from="1720681798034" duration="66000" />
       <workItem from="1720681886107" duration="42000" />
       <workItem from="1720681940394" duration="144000" />
+      <workItem from="1720696711796" duration="843000" />
+      <workItem from="1720697577955" duration="90000" />
+      <workItem from="1720697695812" duration="11528000" />
     </task>
     <servers />
   </component>
