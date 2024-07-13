@@ -5,11 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb58158-d4a1-4b82-afcd-7c37ffad6747" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/social/templates/forms/ticket.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/migrations/0002_post.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/migrations/0003_user_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/migrations/0004_remove_user_tags_post_tags.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/migrations/0005_alter_post_author_comment.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/migrations/0006_comment_created.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/forms/comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/forms/craete_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/forms/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-change_done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-change_form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-confirm.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-done.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-email.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/social/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/social/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/djangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/views.py" afterDir="false" />
     </list>
@@ -36,13 +55,16 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2i5ryZKzfRnlOiodveAIEp1qcdi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
@@ -162,10 +184,95 @@
       <workItem from="1720696711796" duration="843000" />
       <workItem from="1720697577955" duration="90000" />
       <workItem from="1720697695812" duration="11528000" />
+      <workItem from="1720721943521" duration="368000" />
+      <workItem from="1720722341244" duration="1203000" />
+      <workItem from="1720723557622" duration="3325000" />
+      <workItem from="1720736858490" duration="9000" />
+      <workItem from="1720736918839" duration="8000" />
+      <workItem from="1720736988692" duration="169000" />
+      <workItem from="1720737202850" duration="9000" />
+      <workItem from="1720737221305" duration="9000" />
+      <workItem from="1720737241073" duration="5000" />
+      <workItem from="1720737265357" duration="9000" />
+      <workItem from="1720737281040" duration="3000" />
+      <workItem from="1720737297606" duration="12000" />
+      <workItem from="1720737319715" duration="9000" />
+      <workItem from="1720737337677" duration="123000" />
+      <workItem from="1720737505140" duration="461000" />
+      <workItem from="1720738010553" duration="300000" />
+      <workItem from="1720738327964" duration="118000" />
+      <workItem from="1720738448803" duration="4000" />
+      <workItem from="1720738467882" duration="254000" />
+      <workItem from="1720771830650" duration="42000" />
+      <workItem from="1720772055008" duration="561000" />
+      <workItem from="1720772627660" duration="198000" />
+      <workItem from="1720773206404" duration="46000" />
+      <workItem from="1720773257746" duration="14000" />
+      <workItem from="1720773323569" duration="11000" />
+      <workItem from="1720773344518" duration="160000" />
+      <workItem from="1720773621130" duration="67000" />
+      <workItem from="1720773720875" duration="957000" />
+      <workItem from="1720774893937" duration="1802000" />
+      <workItem from="1720776720654" duration="2323000" />
+      <workItem from="1720779137888" duration="31000" />
+      <workItem from="1720779191955" duration="62000" />
+      <workItem from="1720779296508" duration="126000" />
+      <workItem from="1720779454491" duration="2665000" />
+      <workItem from="1720784986195" duration="44000" />
+      <workItem from="1720785049717" duration="122000" />
+      <workItem from="1720785209490" duration="329000" />
+      <workItem from="1720785559392" duration="123000" />
+      <workItem from="1720785693735" duration="1260000" />
+      <workItem from="1720786977893" duration="1316000" />
+      <workItem from="1720792269460" duration="2000" />
+      <workItem from="1720792348820" duration="34000" />
+      <workItem from="1720792545322" duration="2000" />
+      <workItem from="1720792691800" duration="16000" />
+      <workItem from="1720793695056" duration="8000" />
+      <workItem from="1720794324433" duration="11000" />
+      <workItem from="1720794358408" duration="39000" />
+      <workItem from="1720794418810" duration="12000" />
+      <workItem from="1720795117614" duration="16000" />
+      <workItem from="1720795378664" duration="101000" />
+      <workItem from="1720795688201" duration="47000" />
+      <workItem from="1720795759439" duration="21000" />
+      <workItem from="1720795794327" duration="8000" />
+      <workItem from="1720795988306" duration="11000" />
+      <workItem from="1720796070478" duration="13000" />
+      <workItem from="1720796113170" duration="13000" />
+      <workItem from="1720796139580" duration="3000" />
+      <workItem from="1720796167431" duration="7000" />
+      <workItem from="1720796285680" duration="2442000" />
+      <workItem from="1720805779000" duration="447000" />
+      <workItem from="1720806289218" duration="461000" />
+      <workItem from="1720806798642" duration="254000" />
+      <workItem from="1720807092440" duration="87000" />
+      <workItem from="1720807189160" duration="182000" />
+      <workItem from="1720807400771" duration="220000" />
+      <workItem from="1720807652765" duration="2005000" />
+      <workItem from="1720813169689" duration="932000" />
+      <workItem from="1720814118307" duration="11000" />
+      <workItem from="1720814135637" duration="102000" />
+      <workItem from="1720814244968" duration="595000" />
+      <workItem from="1720814854759" duration="13000" />
+      <workItem from="1720814901098" duration="309000" />
+      <workItem from="1720815223491" duration="2093000" />
+      <workItem from="1720817370065" duration="19000" />
+      <workItem from="1720817409355" duration="843000" />
+      <workItem from="1720818340209" duration="26000" />
+      <workItem from="1720818379812" duration="29000" />
+      <workItem from="1720818440152" duration="94000" />
+      <workItem from="1720818557978" duration="185000" />
+      <workItem from="1720818776119" duration="312000" />
+      <workItem from="1720819131202" duration="203000" />
+      <workItem from="1720851669679" duration="1845000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

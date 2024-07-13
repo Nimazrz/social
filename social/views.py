@@ -1,3 +1,4 @@
+from django.contrib.postgres.search import TrigramSimilarity
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
@@ -6,6 +7,9 @@ from .forms import *
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from taggit.models import Tag
+from django.db.models import Count, Q
+from django.db.models import Q
 
 
 # Create your views here.
@@ -70,10 +74,99 @@ def ticket(request):
         form = TicketForm(request.POST)
         if form.is_valid():
             cd = form.cleaned_data
-            message = f"{cd['name']}\n{cd['email']}\n{cd['phone']}\n\n{cd['message']}"
-            send_mail(cd['subject'], message, 'Nimaaa8413@gmail.com', ['Nimaa1030@gmail.com'],
-                      fail_silently=False)
+            # message = f"{cd['name']}\n{cd['email']}\n{cd['phone']}\n\n{cd['message']}"
+            send_mail(cd['subject'],
+                      f"{cd['name']}\n{cd['email']}\n{cd['phone']}\n\n{cd['message']}",
+                      'Nimaaa8413@gmail.com',
+                      ['Nimaa1030@gmail.com'],
+                      fail_silently=False, )
             send = True
     else:
         form = TicketForm()
     return render(request, 'forms/ticket.html', {'form': form, 'send': send})
+
+
+def post_list(request, tag_slug=None):
+    posts = Post.objects.all()
+    tag = None
+    if tag_slug:
+        tag = get_object_or_404(Tag, slug=tag_slug)
+        posts = posts.filter(tags__in=[tag])
+    context = {
+        'posts': posts,
+        'tag': tag,
+    }
+
+    return render(request, 'social/list.html', context)
+
+
+@login_required
+def craete_post(request):
+    if request.method == 'POST':
+        form = CraetePostForm(request.POST)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.author = request.user
+            post.save()
+            form.save_m2m()
+            return redirect('social:profile')
+    else:
+        form = CraetePostForm()
+    return render(request, 'forms/craete_post.html', {'form': form})
+
+
+def post_detail(request, id):
+    post = get_object_or_404(Post, id=id)
+    post_tags_ids = post.tags.values_list('id', flat=True)
+    similar_post = Post.objects.filter(tags__in=post_tags_ids).exclude(id=post.id)
+    similar_post = similar_post.annotate(same_tags=Count('tags')).order_by('-same_tags', 'created')[:2]
+    #comments
+    comments = post.comments.all()
+    form=CommentForm()
+
+    context = {
+        'post': post,
+        'similar_post': similar_post,
+        'comments': comments,
+        'form': form,
+    }
+    return render(request, "social/detail.html", context)
+
+
+def search(request):
+    query = None
+    results = []
+    if 'query' in request.GET:
+        form = SearchForm(data=request.GET)
+        if form.is_valid():
+            query = form.cleaned_data['query']
+            print(query)
+            result1 = Post.objects.filter(description__icontains=query)
+            result2 = Post.objects.filter(tags__name__icontains=query)  # this is for many to many fields
+            results = (result1 | result2)
+
+            print(results)
+            #bug in here
+
+    context = {
+        'query': query,
+        'results': results,
+    }
+    return render(request, 'forms/search.html', context)
+
+
+def post_comment(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    comment = None
+    form = CommentForm(data=request.POST)
+    if form.is_valid():
+        comment = form.save(commit=False)
+        comment.post = post
+        comment.writer = request.user
+        comment.save()
+    context = {
+        'post': post,
+        'form': form,
+        'comment': comment
+    }
+    return render(request, "forms/comment.html", context)

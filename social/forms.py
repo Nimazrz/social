@@ -1,5 +1,5 @@
 from django import forms
-from .models import User
+from .models import *
 from django.contrib.auth.forms import AuthenticationForm
 
 
@@ -33,6 +33,7 @@ class RegisterForm(forms.ModelForm):
         else:
             raise forms.ValidationError("Please enter a valid phone number")
 
+
 class UserEditForm(forms.ModelForm):
     class Meta:
         model = User
@@ -50,19 +51,13 @@ class UserEditForm(forms.ModelForm):
             raise forms.ValidationError("this username is already taken")
         return username
 
-class TicketForm(forms.Form):
-    # چون توی تمپلیت وارد کردیم اینجا دیگه بی معنیه و میتوانیم وارد نکنیم و در سابچکت بجای چوز فیلد باید از چر فیلد استفاده کنیم  و پرانتز روبروش رو خالی کنیم
-    # SUBJECT_CHOICES = (
-    #     ('پیشنهاد', 'پیشنهاد'),
-    #     ('انتقاد', 'انتقاد'),
-    #     ('گزارش', 'گزارش'),
-    # )
 
+class TicketForm(forms.Form):
     message = forms.CharField(widget=forms.Textarea, required=True)
-    name = forms.CharField(max_length=250 ,required=True)
+    name = forms.CharField(max_length=250, required=True)
     email = forms.EmailField()
-    phone = forms.CharField(max_length=11,required=True)
-    subject = forms.CharField()#choices=SUBJECT_CHOICES
+    phone = forms.CharField(max_length=11, required=True)
+    subject = forms.CharField()  # choices=SUBJECT_CHOICES
 
     def clean_phone(self):
         phone = self.cleaned_data['phone']
@@ -74,3 +69,18 @@ class TicketForm(forms.Form):
                 raise forms.ValidationError("The number is invalid")
             else:
                 return phone
+
+
+class CraetePostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ['description', 'tags']
+
+
+class SearchForm(forms.Form):
+    query = forms.CharField()
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = [ 'content']

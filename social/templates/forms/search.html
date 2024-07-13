@@ -1,0 +1,10 @@
+    {% if query %}
+        {{ results.count }}results for post {{query}}:
+    {% endif %}
+    <br>
+
+    {% for post in results %}
+        <a href="{{ post.get_absolute_url }}">{{ post.description }}</a>
+    {% empty %}
+        no result  found!
+    {% endfor %}
