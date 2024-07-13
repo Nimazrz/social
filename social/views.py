@@ -95,8 +95,8 @@ def post_list(request, tag_slug=None):
         posts = posts.filter(tags__in=[tag])
 
     # paginations
-    paginator = Paginator(posts, 4) #
-    page_number = request.GET.get('page',1)
+    paginator = Paginator(posts, 4)  #
+    page_number = request.GET.get('page', 1)
     posts = paginator.page(page_number)
 
     context = {
@@ -127,7 +127,7 @@ def post_detail(request, id):
     post_tags_ids = post.tags.values_list('id', flat=True)
     similar_post = Post.objects.filter(tags__in=post_tags_ids).exclude(id=post.id)
     similar_post = similar_post.annotate(same_tags=Count('tags')).order_by('-same_tags', 'created')[:2]
-    #comments
+    # comments
     comments = post.comments.all()
     form = CommentForm()
 
@@ -177,3 +177,13 @@ def post_comment(request, post_id):
         'comment': comment
     }
     return render(request, "forms/comment.html", context)
+
+
+def prof(request):
+    user = request.user
+    posts = Post.objects.filter(author=user)
+    context = {
+        'posts': posts,
+        'user': user,
+    }
+    return render(request, 'social/profile.html', context)

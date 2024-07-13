@@ -18,6 +18,7 @@ urlpatterns = [
     path('posts/craete_post/', views.craete_post, name='craete_post'),
     path('search/', views.search, name='search'),
     path('posts/<post_id>/comment',views.post_comment,name='post_comment'),
+    path('profile/', views.prof, name="profile"),
 
 
     # registration

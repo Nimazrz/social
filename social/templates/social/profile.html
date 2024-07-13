@@ -1,0 +1,22 @@
+welcome {{ user.username }}
+<div>
+    <table style="width: 80%;border: 2px solid #000000; text-align: right; direction: rtl;">
+
+        <tr>
+            <th>ردیف</th>
+            <th>پست ها</th>
+            <th>ویرایش</th>
+            <th>حذف</th>
+        </tr>
+        {% for post in posts %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td><a href="{{ post.get_absolute_url }}">{{ post.description | truncatewords:10 }}</a></td>
+                <td><a href="">ویرایش</a></td>
+                <td><a href="">حذف</a></td>
+                {% endfor %}
+            </tr>
+    
+    </table>
+    {% include 'partials/pagination.html' with page=posts_list %}
+</div>

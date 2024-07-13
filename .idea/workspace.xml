@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb58158-d4a1-4b82-afcd-7c37ffad6747" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/social/templates/partials/pagination.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/djangoProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangoProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/social/profile.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/templates/social/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/social/templates/social/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -246,7 +244,7 @@
       <workItem from="1720818776119" duration="312000" />
       <workItem from="1720819131202" duration="203000" />
       <workItem from="1720851669679" duration="1845000" />
-      <workItem from="1720856511370" duration="1277000" />
+      <workItem from="1720856511370" duration="3684000" />
     </task>
     <servers />
   </component>
