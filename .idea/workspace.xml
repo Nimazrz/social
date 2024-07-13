@@ -5,31 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1fb58158-d4a1-4b82-afcd-7c37ffad6747" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/social/migrations/0002_post.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/migrations/0003_user_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/migrations/0004_remove_user_tags_post_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/migrations/0005_alter_post_author_comment.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/migrations/0006_comment_created.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/forms/comment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/forms/craete_post.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/forms/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-change_done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-change_form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-complete.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-confirm.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-done.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-email.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/registration/password-reset-form.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/social/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/social/templates/social/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/social/templates/partials/pagination.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/djangoProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/djangoProject.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/social/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/social/templates/social/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/social/templates/social/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/social/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/social/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,23 +42,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
-    &quot;RunOnceActivity.OpenDjangoStructureViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/nima/PycharmProjects/venvsociallearn&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Nima/Desktop/social",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.editor",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/social/templates/forms" />
@@ -113,8 +93,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
-        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.17011.127" />
+        <option value="bundled-python-sdk-48aec45f0201-7e9c3bbb6e34-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.17011.127" />
       </set>
     </attachedChunks>
   </component>
@@ -266,6 +246,7 @@
       <workItem from="1720818776119" duration="312000" />
       <workItem from="1720819131202" duration="203000" />
       <workItem from="1720851669679" duration="1845000" />
+      <workItem from="1720856511370" duration="1277000" />
     </task>
     <servers />
   </component>

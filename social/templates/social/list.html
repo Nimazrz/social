@@ -18,3 +18,5 @@
 {#        {% if not forloop.last %}, {% endif %}#}
 {#    {% endfor %}#}
 {% endfor %}
+
+{% include 'partials/pagination.html' with page=posts %}

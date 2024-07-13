@@ -1,4 +1,5 @@
 from django.contrib.postgres.search import TrigramSimilarity
+from django.core.paginator import Paginator
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
@@ -9,7 +10,6 @@ from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
 from taggit.models import Tag
 from django.db.models import Count, Q
-from django.db.models import Q
 
 
 # Create your views here.
@@ -88,10 +88,17 @@ def ticket(request):
 
 def post_list(request, tag_slug=None):
     posts = Post.objects.all()
+    # tags
     tag = None
     if tag_slug:
         tag = get_object_or_404(Tag, slug=tag_slug)
         posts = posts.filter(tags__in=[tag])
+
+    # paginations
+    paginator = Paginator(posts, 4) #
+    page_number = request.GET.get('page',1)
+    posts = paginator.page(page_number)
+
     context = {
         'posts': posts,
         'tag': tag,
@@ -122,7 +129,7 @@ def post_detail(request, id):
     similar_post = similar_post.annotate(same_tags=Count('tags')).order_by('-same_tags', 'created')[:2]
     #comments
     comments = post.comments.all()
-    form=CommentForm()
+    form = CommentForm()
 
     context = {
         'post': post,
